@@ -1,0 +1,79 @@
+<view class="header">
+<view class="header_left">
+<view class="hd" bindtap="back_home">{{store_info.storename}}    ></view>
+<text wx:if="{{store_info.juli!=null}}" class="jl">距离您{{store_info.juli}}m</text>
+</view>
+<view class="header_right">
+<image class="shoucan" src="{{store_info.favorite==0?'../img/weishoucan.png':'../img/yishoucan.png'}}" bindtap="favorite"></image>
+<text class="shoucantext">{{store_info.favorite==0?'点击收藏':'已收藏'}}</text>
+</view>
+</view>
+
+
+
+
+<!--左侧菜单-->
+<scroll-view class="left-menu" scroll-y="true">
+	<view wx:for="{{food}}" wx:key="index" class="left-menu-common {{activeIndex==index?'left-menu-selected':'left-menu-unselect'}}" data-index="{{index}}" bindtap="selectMenu">
+		<text class="list-mune-name">{{item.category}}</text>
+	</view>
+</scroll-view>
+
+<!--右侧菜单-->
+<scroll-view class="foods" scroll-y="true" scroll-with-animation='true' style="height:75%;position: fixed;top: 15%;" scroll-into-view="{{toView}}" bindscroll="onFoodScroll" scroll-top="{{scrollTop}}" bindscrolltolower="onTop" scroll-with-animation="true">
+	<view class="content" id="a{{index}}" wx:for="{{food}}" wx:key="lists">
+		<view class="list-tab">{{item.category}}</view>
+		<view class="content-list" wx:for="{{item.food}}" wx:for-item="items" wx:key="list" wx:for-index="indexs" >
+			<view class="list-image-box" data-index="{{index}}" data-indexs="{{indexs}}" bindtap="todetail">
+				<image class="list-image" mode="widthFix" src="{{items.imgurl}}"></image>
+			</view>
+			<view class="list-name-box" data-index="{{index}}" data-indexs="{{indexs}}" bindtap="todetail">
+				<view>{{items.foodName}}</view>
+				<view class="list-price">￥{{items.price}}{{items.discount<1?'/折扣价￥'+items.discount*items.price+'':''}}</view>
+			</view>
+      <view class="add">
+			<image class="jian-icon" src="../img/jian.png" wx:if="{{items.number>0}}" data-index="{{index}}" data-indexs="{{indexs}}" bindtap="jian_food"></image>
+			<text class="number" wx:if="{{items.number>0}}">{{items.number}}</text>
+      <image class="add-icon" src="../img/jia.png" data-index="{{index}}" data-indexs="{{indexs}}" bindtap="add_food"></image>
+      </view>
+		</view>
+	</view>
+</scroll-view>
+
+
+<view class="bottom-operate-menu" >
+	<view class="shopping-cart" bindtap="showCartList">
+		<image  src="../img/gouwuche.png" class="cart-icon" style="width:100rpx;height: 100rpx;"></image>
+    <view class="shopping-cart-price" wx:if="{{sumMoney==0}}">购物车是空的</view>
+    <view class="shopping-cart-price"  wx:if="{{sumMoney!=0}}">￥{{sumMoney}}</view>
+	</view>
+  <view class="submit-btn {{sumMoney!=0?'activity-color-bg':''}}">
+  <view class="submit-btn-label {{sumMoney!=0?'color-white':''}}" bindtap="to_order">选好了</view>
+  </view>
+
+
+</view>
+
+	<!-- 购物车 -->
+<view class="shopcart" wx:if="{{showCart}}">
+  <view class="shopcart-mask" bindtap="showCartList" wx:if="{{showCart}}"></view>
+  <view class="shopcart-wrap">
+    <view class="shopcart-head">
+      <view class="shopcart-head-title">已选商品</view>
+      <view class="shopcart-head-clean" bindtap="cartClear">清空购物车</view>
+    </view>
+    <view class="shopcart-list">
+      <view class="shopcart-item" wx:for="{{cartList}}" wx:key="id">
+        <view class="shopcart-item-name">{{item.name}}</view>
+        <view class="shopcart-item-price">
+          <view>￥{{item.price*item.discount}}</view>
+        </view>
+        <view class="shopcart-item-number">
+          <image class="iconfont shopcart-icon-dec" data-id="{{index}}" bindtap="cartNumberDec" src="../img/jian.png"></image>
+          <view>{{item.number}}</view>
+          <image class="iconfont shopcart-icon-add" data-id="{{index}}" bindtap="cartNumberAdd" src="../img/jia.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

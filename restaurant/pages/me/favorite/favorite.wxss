@@ -1,0 +1,71 @@
+.non_favorite{
+  width: 100%;
+  margin-top: 49%;
+  text-align: center;
+  font-size: 48rpx;
+  color: gainsboro;
+}
+.body{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  justify-content: center;
+}
+.box{
+  width: 300rpx;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+  border: 1rpx solid gainsboro;
+  border-radius: 20rpx;
+}
+.img{
+  width: 280rpx;
+  height: 280rpx;
+  padding: 10rpx;
+}
+.center{
+  width: 300rpx;
+  height: 50rpx;
+  border-top: 1rpx solid gainsboro;
+}
+.name{
+  width: 300rpx;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+}
+.footer{
+  width: 300rpx;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.location{
+  width: 168rpx;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+}
+.city{
+  width: 128rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  display:-webkit-box;
+  -webkit-line-clamp:1;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  -webkit-box-orient:vertical;
+  word-break:break-all;
+  font-size: 30rpx;
+}

@@ -1,0 +1,59 @@
+.lunbo{
+  border:2px solid #714f46;
+  border-radius:5px;
+  width: 96%;
+  margin-left: 1.5%;
+}
+.body{
+  width: 100%;
+  height: 380rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.diancan{
+  width: 40%;
+  height: 90%;
+  background-color: rgb(246, 245, 245);
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20rpx;
+}
+.order{
+  width: 40%;
+  height: 90%;
+  background-color: rgb(246, 245, 245);
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20rpx;
+}
+.img{
+  margin-top: 15rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.text1{
+  font-size: large;
+  margin-top: 20rpx;
+  color: rgb(148, 147, 147);
+}
+.text2{
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  color: rgb(148, 147, 147);
+}
+.me{
+  color: rgb(148, 147, 147);
+  font-size: medium;
+  margin-left: 2%;
+}
+.footer_img{
+  width: 96%;
+  height: 300rpx;
+  margin-left: 2%;
+}

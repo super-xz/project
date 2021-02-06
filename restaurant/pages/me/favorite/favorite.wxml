@@ -1,0 +1,17 @@
+<view wx:if='{{favorite.length==0}}' class="non_favorite">暂无收藏哦！</view>
+<view class="body">
+<view class="box" wx:for="{{favorite}}" wx:key='index'  data-index="{{index}}" bindtap="to_store">
+<image src="{{item.store_img!=null?(item.store_img!=''?item.store_img:'../../img/dianpu.png'):'../../img/dianpu.png'}}" class="img"></image>
+<view class="center">
+<text class="name">{{item.storename}}</text>
+</view>
+<view class="footer">
+<text class="location">{{item.location}}</text>
+<text class="city">{{item.city}}</text>
+</view>
+</view>
+
+
+
+
+</view>

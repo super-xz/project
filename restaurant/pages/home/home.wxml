@@ -1,0 +1,21 @@
+<wxs module="filters" src="../../utils/toFix.wxs"></wxs>
+<view class="home">
+<view class="head">
+<image src="../img/bj.png"></image>
+<button style="width:200rpx" class="city">{{city}}</button>
+</view>
+
+
+<view class="list" wx:for="{{store}}" wx:key="item" bindtap="to_list" data-index="{{index}}">
+<view class="img">
+<image src="{{item.store_img!=null?(item.store_img!=''?item.store_img:'../img/dianpu.png'):'../img/dianpu.png'}}" class="image"></image>
+</view>
+<view class="dian">
+<text class="dianname" >{{item.storename}}\n</text>
+<text class="miaoshu">({{item.location}}) \n</text>
+</view>
+
+<view class="juli"><text style="line-height:200rpx ;">离我{{filters.toFix(item.distance)}}m</text></view>
+</view>
+
+</view>

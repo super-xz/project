@@ -1,0 +1,19 @@
+<view class="body">
+ <view class="item" wx:for="{{order_list}}"  wx:key='index' >
+ <view class="header" data-index="{{index}}" bindtap="order_detail">
+ <image src="{{item.store_img}}" class="img"></image>
+ <view class="store">
+ <view class="name">{{item.store}}</view>
+ <view class="time">{{item.time}}</view>
+ </view>
+ </view>
+ <view class="order" data-index="{{index}}" bindtap="order_detail">
+ <view class="food">{{item.food}} 等{{item.number}}件</view>
+ <view class="price">￥{{item.total}}</view>
+ </view>
+ <view class="footer">
+ <view class="code">取餐码:{{item.No}}</view>
+ <text type="button" wx:if="{{item.store_status==1}}" class="button" data-index="{{index}}" bindtap="toStore">再来一单</text>
+ </view>
+ </view>
+</view>

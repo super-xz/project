@@ -1,0 +1,57 @@
+
+.image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.list{
+  width: 99%;
+  height: 200rpx;
+  display: flex;
+  border: 1px black solid;
+  border-radius: 30rpx;
+  margin-top:15rpx ;
+}
+.img{
+  width: 20%;
+  height: 200rpx;
+  line-height: 250rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dian{
+  width: 55%;
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+  flex-direction: column;
+  
+}
+.dianname{
+  margin-top: 30rpx;
+  font-weight: 700;
+}
+.miaoshu{
+  font-size: 30rpx;
+}
+.juli{
+  width: 30%;
+  font-size: 25rpx;
+  height: 200rpx;
+  text-align: center;
+}
+.head image{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 20rpx;
+  border-radius: 1px solid black;
+}
+.city{
+  line-height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+  left: 30rpx;
+  opacity: 70%;
+  background-color: wheat;
+}

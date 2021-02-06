@@ -1,0 +1,27 @@
+<view class='lunbo'>
+<swiper autoplay='true' style='height:400rpx' indicator-dots='true'>
+<block wx:for="{{picture}}" wx:key="pid">
+<swiper-item data-url="{{item.url}}">
+<image src="{{item.pic}}" mode="aspectFill" style='width:100%;height:100%'></image>
+</swiper-item>
+</block>
+</swiper>
+</view>
+
+<view class="body">
+<view class="diancan" bindtap="to_home">
+<image src="../img/food.png" class="img"></image>
+<view class="text1">自取</view>
+<text class="text2">提前下单，无需等待</text>
+</view>
+<view class="order" bindtap="to_orderlist">
+<image src="../img/order.png" class="img"></image>
+<view class="text1">订单</view>
+<text class="text2">查看历史订单</text>
+</view>
+</view>
+
+<view class="fooder">
+<text class="me">关于我们</text>
+<image src="../img/bj.png" class="footer_img"></image>
+</view>

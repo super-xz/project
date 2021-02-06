@@ -1,0 +1,15 @@
+<view class="me">
+	<view class="head">
+		<image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+		<view class="text">
+			<text class="nickNmae">{{userInfo.nickName}}</text>
+		</view>
+	</view>
+
+	<view class="box" bindtap="to_favorite">
+		<image src="../img/dianpu.png" class='category'></image>
+		<text class='mytext'>店铺收藏</text>
+		<image src="../img/jiantou.png" class='jiantou'></image>
+	</view>
+
+</view>

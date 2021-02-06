@@ -1,0 +1,44 @@
+<view class="header">
+	<image class="img" src="{{food_detail.imgurl}}"></image>
+</view>
+<view class="name">{{food_detail.foodName}}</view>
+<view class="center">
+	<view class="price_f">
+		<text class="price">￥{{food_detail.price}}</text>
+		<text class="sales">销量：{{food_detail.sales}}</text>
+	</view>
+</view>
+<view class="nav">
+<scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+<view class="scroll-view_H" style="width: 100%">
+         <view style="width: 50%"><view class="{{flag==0?'select':'normal'}}" id="0" bindtap="switchNav">描述</view></view>
+         <view style="width: 50%"><view class="{{flag==1?'select':'normal'}}" id="1" bindtap="switchNav">评论</view></view>
+</view>
+</scroll-view>
+</view>
+<swiper current="{{currentTab}}" bindchange="changeTab">
+<swiper-item>
+<view class="miaoshu">
+	<textarea>{{food_detail.describe}}</textarea>
+</view>
+</swiper-item>
+
+<swiper-item>
+<scroll-view scroll-y="true" style="width:100%;height:100%">
+<view wx:if="{{feekback.length==0}}" class="non_comment">暂无评论哦！</view>
+
+<block wx:for="{{feekback}}" wx:key="index">
+<view class="box">
+<view class="head"><image class="head-img" src="{{item.head}}"></image></view>
+<view class="text">
+<view class="wxinfo">
+<view style="font-size: 36rpx;width:50%">{{item.wxname}}</view>
+<view style="font-size: 24rpx;width:50%;text-align:right;margin-right:20rpx">{{item.comment_time}}</view>
+</view>
+<text class="comment">{{item.comment}}</text>
+</view>
+</view>
+</block>
+</scroll-view>
+</swiper-item>
+</swiper>

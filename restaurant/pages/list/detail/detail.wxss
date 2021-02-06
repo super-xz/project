@@ -1,0 +1,120 @@
+.header{
+  width: 100%;
+  height: 60%;
+}
+.img{
+  width: 100%;
+  height: 600rpx;
+  border: 1px solid gainsboro;
+}
+.name{
+  margin: 40rpx 0 0 20rpx;
+  font-size: larger;
+  font-family: STHupo;
+}
+.center{
+  display: flex;
+  width: 100%;
+  height: 60rpx;
+}
+.price_f{
+  width: 75%;
+}
+.price{
+  margin-top: 40rpx;
+  margin:20rpx 70rpx 0 20rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: fuchsia;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.sales{
+  margin-top: 40rpx;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: gray;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.number{
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.nav{
+  width: 100%;
+  height: 80rpx;
+}
+.scroll-view_H{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+.normal{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.select{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  text-align: center;
+  background-color: gainsboro;
+}
+.miaoshu{
+  width: 90%;
+  margin:40rpx 5% 0 5%;
+  color: gray;
+}
+.non_comment{
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+  font-size: 48rpx;
+  color: gainsboro;
+}
+.box{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20rpx;
+  border-bottom: 1px solid gainsboro;
+}
+.head{
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.head-img{
+  width: 72rpx;
+  height: 72rpx;
+  line-height: 100%;
+  border-radius: 80rpx;
+  border: 1px #000000 solid;
+}
+.text{
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+}
+.wxinfo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.comment{
+  width: 100%;
+border-radius: 20rpx;
+  background-color: rgb(237, 235, 235);
+  font-size: 30rpx;
+  text-overflow:ellipsis;
+  padding: 10rpx 0r 10rpx 0rpx;
+}

@@ -1,0 +1,52 @@
+.me{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.head{
+  width: 100%;
+  height: 190rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: gainsboro;
+  border:1rpx solid ghostwhite;
+  border-radius: 50rpx;
+}
+.avatar{
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 1px rgb(233, 229, 229) solid;
+}
+.text{
+  margin-left: 5%;
+  margin-top: 20rpx;
+  width: 100%-150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.category{
+  width: 100rpx;
+  height: 100rpx;
+}
+.jiantou{
+  width: 100rpx;
+  height: 100rpx;
+}
+.box{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top:1rpx solid gainsboro ;
+  border-bottom:1rpx solid gainsboro ;
+}
+.mytext{
+  width: 70%;
+}

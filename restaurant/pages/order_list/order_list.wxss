@@ -1,0 +1,93 @@
+.body{
+  background-color: #E6E6E6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+flex-direction: column;
+}
+.item{
+  width: 96%;
+  height: 270rpx;
+  margin-top: 10rpx;
+  background-color:white;
+  border: 1px solid #BDBDBD;
+  border-radius: 30rpx;
+  margin-left: 1.5%;
+}
+.header{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.img{
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.store{
+  height: 70rpx;
+  line-height: 70rpx;
+  margin-left: 20rpx;
+  display:flex;
+  flex-direction: column;
+  
+}
+.name{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.time{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+  color: #A4A4A4;
+}
+.order{
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+}
+.food{
+  width: 72%;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.price{
+  width: 25%;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.footer{
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+}
+.code{
+  width: 250rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: gold;
+  font-size: 35rpx;
+  color: white;
+  border-radius: 0rpx;
+  border-bottom-right-radius:15rpx;
+  border-top-right-radius:15rpx
+}
+.button{
+  width: 150rpx;
+  border:1rpx solid #E6E6E6;
+  text-align: center;
+  font-size: smaller;
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 10rpx;
+  position: absolute;
+  right: 50rpx;
+}
