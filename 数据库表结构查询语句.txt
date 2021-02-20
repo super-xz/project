@@ -1,0 +1,13 @@
+SELECT '字段名称','数据类型','主键','备注'
+UNION
+SELECT
+	COLUMN_NAME as 字段名称,
+	COLUMN_TYPE as 数据类型,
+	if(COLUMN_KEY='PRI','Y','N') as 主键,
+	COLUMN_COMMENT as 备注
+FROM
+	INFORMATION_SCHEMA. COLUMNS
+WHERE
+	table_schema = 'restaurant'
+AND 
+	table_name = 'category'
